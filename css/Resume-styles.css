@@ -1,0 +1,89 @@
+/*COLOR PALLETE 
+
+Color Theme Swatches in Hex 
+.ResumeFA22-1-hex { color: #A7CDEC; Light Blue}
+.ResumeFA22-3-hex { color: #59636C; Blue}
+.ResumeFA22-2-hex { color: #AD8D5E; Tan}
+.ResumeFA22-4-hex { color: #D9601A; Orange}
+.ResumeFA22-5-hex { color: #8EA26B; Light Green }
+
+Color Theme Swatches in RGBA 
+.ResumeFA22-1-rgba { color: rgba(167, 205, 236, 1); light blue}
+.ResumeFA22-2-rgba { color: rgba(173, 141, 94, 1); tan }
+.ResumeFA22-3-rgba { color: rgba(89, 99, 108, 1); blue }
+.ResumeFA22-4-rgba { color: rgba(217, 96, 26, 1); orange}
+.ResumeFA22-5-rgba { color: rgba(142, 162, 107, 1); }
+
+Color Theme Swatches in HSLA
+.ResumeFA22-1-hsla { color: hsla(206, 64, 79, 1); }
+.ResumeFA22-2-hsla { color: hsla(35, 32, 52, 1); }
+.ResumeFA22-3-hsla { color: hsla(208, 9, 38, 1); }
+.ResumeFA22-4-hsla { color: hsla(21, 78, 47, 1); }
+.ResumeFA22-5-hsla { color: hsla(81, 22, 52, 1); }
+
+*/
+
+
+/* GLOBAL STYLES--------------------------------*/
+body {color:#4e4205;
+    margin: 0;
+    padding:0; 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+img{
+    width:300px;
+    box-shadow: 10px 10px 8px #535c53e7;
+    margin-right: 10px;
+}
+
+a {color:#59636C
+}
+
+a:hover {text-decoration: none;
+}
+
+/* PROFILE
+--------------------------------*/
+header {background:#D9601A;}
+
+
+
+
+
+/* PROJECTS
+--------------------------------*/
+.projects{background:#8EA26B;}
+.projects a {color:#59636C}
+.projects .btn { color:#8EA26B;
+                background:#59686C;
+                text-decoration: none;
+                padding:8px;
+                border-radius:4px;}
+  
+
+.projects .btn:hover {background:rgba(89, 99, 108, 80%);}
+
+
+
+/* WORK EXPERIENCE
+--------------------------------*/
+.work-experience{background:#59686C; }
+
+
+
+
+
+/* EDUCATION
+--------------------------------*/
+.education{ background:#AD8D5E;}
+
+
+
+
+
+/* CONTACT INFO
+--------------------------------*/
+.contact-info{background:#a7cdec; }
