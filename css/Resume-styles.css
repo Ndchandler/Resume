@@ -28,9 +28,9 @@ Color Theme Swatches in HSLA
 body {color:#4e4205;
     margin: 0;
     padding:0; 
-    font-family: 'Montserrat', sans-serif;
+    font-family: Ubuntu, Merriweather;
     font-size: 15px;
-    line-height: 1.5;
+    line-height: 1.5;;
 }
 
 img{
@@ -42,8 +42,27 @@ img{
 a {color:#59636C
 }
 
-a:hover {text-decoration: none;
-}
+a:hover {text-decoration: none;}
+
+h1 {font-size: 60px;
+    text-align: center;
+    margin: 0 -15px;
+    text-transform:none;
+    color: #D9601A;
+    padding: 5px 15px 5px 15px;
+    letter-spacing: 15px;
+    text-shadow: 0 5px 7px #333, -10px 0 17px #ff9, 10px 0 10px #8EA26B, 0 -5px 7px #fff;}
+
+h2 { margin: 0; text-align: center; font-size:45px;}
+
+h1, h2 {font-family: 'Merriweather', serif;}
+
+.content-wrap { width: 800px;
+   margin : 0 auto;
+   padding: 60px 0;
+   }
+
+
 
 /* PROFILE
 --------------------------------*/
@@ -56,15 +75,21 @@ header {background:#D9601A;}
 /* PROJECTS
 --------------------------------*/
 .projects{background:#8EA26B;}
-.projects a {color:#59636C}
+
+.projects a {color:#59636C;}
+
 .projects .btn { color:#8EA26B;
                 background:#59686C;
                 text-decoration: none;
                 padding:8px;
-                border-radius:4px;}
-  
+                border-radius:4px;
+                display: inline-block;}
 
 .projects .btn:hover {background:rgba(89, 99, 108, 80%);}
+
+.project-item{overflow:hidden; border-bottom: 1px dashed #59686C; padding: 25px 0;}
+
+.project-item img{float: left; margin-right: 20px;}
 
 
 
