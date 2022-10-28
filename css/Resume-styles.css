@@ -2,7 +2,7 @@
 
 Color Theme Swatches in Hex 
 .ResumeFA22-1-hex { color: #A7CDEC; Light Blue}
-.ResumeFA22-3-hex { color: #59636C; Blue}
+.ResumeFA22-3-hex { color: #6c757d; Blue}
 .ResumeFA22-2-hex { color: #AD8D5E; Tan}
 .ResumeFA22-4-hex { color: #D9601A; Orange}
 .ResumeFA22-5-hex { color: #8EA26B; Light Green }
@@ -12,34 +12,67 @@ Color Theme Swatches in RGBA
 .ResumeFA22-2-rgba { color: rgba(173, 141, 94, 1); tan }
 .ResumeFA22-3-rgba { color: rgba(89, 99, 108, 1); blue }
 .ResumeFA22-4-rgba { color: rgba(217, 96, 26, 1); orange}
-.ResumeFA22-5-rgba { color: rgba(142, 162, 107, 1); }
-
-Color Theme Swatches in HSLA
-.ResumeFA22-1-hsla { color: hsla(206, 64, 79, 1); }
-.ResumeFA22-2-hsla { color: hsla(35, 32, 52, 1); }
-.ResumeFA22-3-hsla { color: hsla(208, 9, 38, 1); }
-.ResumeFA22-4-hsla { color: hsla(21, 78, 47, 1); }
-.ResumeFA22-5-hsla { color: hsla(81, 22, 52, 1); }
+.ResumeFA22-5-rgba { color: rgba(142, 162, 107, 1); light green}
 
 */
 
+@supports (grid-area: auto) {
+  @media screen and (min-width: 770px) {
+      
+.whole {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto 1fr 3fr; 
+      grid-template-areas:
+            "head head"
+            "projects foot"
+            "projects education"
+            "work-experience work-experience";
+             
+}
+
+            .head {
+                    grid-area: head;
+                }
+
+            .projects {
+                    grid-area: projects;
+                }
+
+            .work-experience {
+                    grid-area: work-experience;
+                }
+
+            .education {
+                    grid-area: education;
+                }
+
+            .foot {
+                    grid-area: foot;
+                }
+
+
+}
+}
 
 /* GLOBAL STYLES--------------------------------*/
 body {color:#4e4205;
-    margin: 0;
+    margin: auto;
     padding:0; 
     font-family: Ubuntu, Merriweather;
     font-size: 15px;
-    line-height: 1.5;;
+    line-height: 1.5;
+    background-color: #a7cdec;
 }
 
 img{
-    width:300px;
+    width: 250px;
     box-shadow: 10px 10px 8px #535c53e7;
     margin-right: 10px;
+    margin-bottom: 20px;
 }
 
-a {color:#59636C
+a {color:#6c757d
 }
 
 a:hover {text-decoration: none;}
@@ -57,29 +90,71 @@ h2 { margin: 0; text-align: center; font-size:45px;}
 
 h1, h2 {font-family: 'Merriweather', serif;}
 
-.content-wrap { width: 800px;
+h3 {margin-bottom: 0;}
+
+h3 p { font-style: italic;
+       margin: 0%;}
+
+h4 { margin: 0%;}
+
+.job-item p {margin: 0;}
+
+.content-wrap { max-width: 800px;
+    width:85%;
    margin : 0 auto;
    padding: 60px 0;
    }
+ 
+.divider > section {border-bottom: 1px dashed #79828a; 
+        padding: 20px 0;}
 
-
+.divider > section:last-of-type {border-bottom: none;}
 
 /* PROFILE
 --------------------------------*/
-header {background:#D9601A;}
+header {background:#D9601A;
+        text-align: center;}
+
+nav {width:100%;}
+
+ul li a{text-decoration: none;}		
 
 
+nav ul {text-align: center;}
 
+nav ul li {position: relative;
+           background-color: #4e4205;
+           padding: 15px 0px; 
+           font: bold 12px/18px sans-serif;
+           border-radius: 6px;
+           margin-right: 5px;}
 
+nav ul li a {color:#a7cdec;
+        text-decoration: none;
+        padding: 15px 20px;}
+
+nav ul li ul {padding: 0; 		
+            position: absolute;
+            top: 48px;
+            left:-9999999px;   		
+            width: 180px;}
+
+nav ul li ul li {display: block;
+                 background-color: #4e4205;}
+
+nav ul li:hover {background-color: #6c757d;}
+
+nav ul li:hover ul{ display: block;
+                    left :0px;}
 
 /* PROJECTS
 --------------------------------*/
 .projects{background:#8EA26B;}
 
-.projects a {color:#59636C;}
+.projects a {color:#6c757d;}
 
 .projects .btn { color:#8EA26B;
-                background:#59686C;
+                background:#6c757d;
                 text-decoration: none;
                 padding:8px;
                 border-radius:4px;
@@ -87,28 +162,93 @@ header {background:#D9601A;}
 
 .projects .btn:hover {background:rgba(89, 99, 108, 80%);}
 
-.project-item{overflow:hidden; border-bottom: 1px dashed #59686C; padding: 25px 0;}
-
-.project-item img{float: left; margin-right: 20px;}
-
+.wrapper{ display:grid;
+        grid-template-columns: 4fr 2fr;
+        row-gap: 35px;
+        column-gap: 35px;}
+    
 
 
 /* WORK EXPERIENCE
 --------------------------------*/
-.work-experience{background:#59686C; }
-
-
+.work-experience{background:#59686C; 
+                 padding: 20px;}
 
 
 
 /* EDUCATION
 --------------------------------*/
-.education{ background:#AD8D5E;}
+.education{ background-image:url(../images/pexels-cottonbro-5192061-edited.jpg);
+            background-size: cover;
+            background-position: top right;
+            padding-bottom: 95px;
 
+}
 
-
+.education p { width: 75%}
 
 
 /* CONTACT INFO
 --------------------------------*/
-.contact-info{background:#a7cdec; }
+footer{background:#a7cdec; 
+       text-align:center;
+       margin-top: 60px;
+       margin-bottom:60px ;}
+
+.contact-info{ list-style-type:none;
+               padding:0;
+               display:flex;
+               justify-content: center;}
+
+.contact-info a {padding:15px;
+                 display:inline-block;}
+
+.contactbtn{ 
+    color:#4e4205;
+    background:#8EA26B;
+    text-decoration: none;
+    margin: 5px;
+    padding:8px;
+    border-radius:4px;
+    display: inline-block;}
+
+
+
+
+/* Responsive Design
+--------------------------------*/
+@media screen and (max-width: 770px){
+nav ul li {display:block}
+}
+
+@media screen and (min-width: 770px)
+{
+
+nav ul li {display:inline-block}
+
+}
+
+@media screen and (max-width: 902px){
+
+    .subtitle{margin: 0; 
+        text-align: center; 
+        font-size:20px;}
+}
+
+
+@media screen and (min-width: 902px)
+{.project-item img{float: left; margin-right: 20px;}
+
+ .job-item {display:grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 3fr .5fr;
+    column-gap: 20px;
+    overflow:hidden; } 
+
+    .subtitle{margin: 0; 
+        text-align: center; 
+        font-size:45px;}
+
+
+
+}
